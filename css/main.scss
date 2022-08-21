@@ -306,7 +306,7 @@ ul.features-list{
     }
 }
 .features-section{
-    position:relatie;
+    position:relative;
 }
 .features-section img{
     display: block;
@@ -339,17 +339,26 @@ ul.features-list{
     }
 }
 }
-@media only screen and (min-width: 1450px){
-    .features-section{
+@media only screen and (min-width: 1450px) {
+  .features-section{
+&:before{
+  content: '';
+  position:absolute;
+  width: 10%;
+  height: 20em;
+  background: var(--primary-color);
+  left: 0;
+  top: -4em;
+}
+&:after{
+  content: '';
+  position:absolute;
+  width: 200px;
+  height: 20em;
+  background: url('../images/dots.svg');
+  left: 4.5em;
+  top: 2em;
+}
 
-        &:before{
-            content: '';
-            position: absolute;
-            width: 10%;
-            height: 20em;
-            background-color: var(--primary-color);
-            left:0;
-            top: -4em;
-        }
-    }
+  }
 }
